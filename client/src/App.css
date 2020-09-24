@@ -9,14 +9,6 @@ body {
   justify-content: center;
 }
 
-.btn {
-  border-radius: 0;
-}
-
-.table-dark {
-  background-color: inherit;
-}
-
 .App {
   text-align: center;
   display: flex;
@@ -30,18 +22,62 @@ body {
   pointer-events: none;
 }
 
+.table-dark {
+  background-color: inherit;
+}
+
+.form-control:focus {
+  border-color: #61dafb;
+}
+
+.btn {
+  border-radius: 0;
+}
+
 .btn-custom {
-  background-color: #e83e8c;
-  color: white;
+  background-color: #61dafb;
+  color: #282c34;
 }
 
 .btn-custom:hover {
-  background-color: #cd186b;
-  color: white;
-}
+  background-color: #2EA7C8;
+}       
 
 .btn-custom:focus {
+  background-color: #2EA7C8;
   box-shadow: none;
+}
+
+.btn-custom-red {
+  color: #e83e8c;
+  background-color: inherit;
+  border-color: #e83e8c;
+}
+
+.btn-custom-red:hover {
+  color: #343a40;
+  background-color: #e83e8c;
+  border-color: #e83e8c;
+}
+
+.btn-custom-red:focus {
+  color: #343a40;
+  background-color: #e83e8c;
+  border-color: #e83e8c;
+  box-shadow: none;
+}
+
+.deletion-x {
+  color: #e83e8c;
+  border: 2px solid #e83e8c;
+  border-radius: 4%;
+  font-weight: bold;
+}
+
+.deletion-x:hover {
+  color: #cd186b;
+  border: 2px solid #cd186b;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -56,6 +92,11 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+.App-link:hover, .App-link:focus {
+  color: #2EA7C8;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
