@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const rmtRoutes = require("./rstRoutes");
+const rstRoutes = require("./rstRoutes");
 
 // react-mongo-template routes
 router.use("/react-mysql-template", rstRoutes);
