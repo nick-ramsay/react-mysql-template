@@ -1,7 +1,7 @@
 {
-  "name": "react-barebones-template",
+  "name": "react-mysql-template",
   "version": "1.0.0",
-  "description": "Testing environment for JSON Web Tokens",
+  "description": "Template to be used for starting React/Node Projects that use MySQL database",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
