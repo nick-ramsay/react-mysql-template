@@ -20,14 +20,14 @@ const Home = () => {
     }
 
     const saveMessage = (event) => {
-        /*if (newMessage !== "") {
+        if (newMessage !== "") {
             API.createMessage(newMessage, new Date()).then(
                 res => 
                     console.log(res.data),
-                    renderMessages(),
+                    //renderMessages(),
                     document.getElementById('messageInput').value = ""
             );
-        }*/
+        }
     };
 
     const deleteMessage = (event) => {
