@@ -1,28 +1,27 @@
 {
   "development": {
     "username": "root",
-    "password": "data.Dump89",
+    "password": "relational.Dump89",
     "database": "react_mysql_template_db",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "test": {
     "username": "root",
-    "password": "data.Dump89",
+    "password": "relational.Dump89",
     "database": "database_test",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "production": {
-    "username": "x78pxxiql4m9lxhc",
-    "password": "e88bzcuq9mjwyvxl",
-    "database": "jj7bb8d7ktmy6jea",
-    "host": "l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "port": 3306,
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   }
