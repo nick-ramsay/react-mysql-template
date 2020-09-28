@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "root",
+    "username": "root", 
     "password": "relational.Dump89",
     "database": "react_mysql_template_db",
     "host": "127.0.0.1",
