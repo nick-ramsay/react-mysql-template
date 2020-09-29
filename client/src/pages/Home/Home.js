@@ -11,12 +11,10 @@ const Home = () => {
     var [messages, setMessages] = useState([]);
 
     const renderMessages = () => {
-        /*
         API.findAllMessages().then(res => {
             console.log(res.data);
             setMessages(messages => res.data);
         });
-        */
     }
 
     const saveMessage = (event) => {
@@ -24,7 +22,7 @@ const Home = () => {
             API.createMessage(newMessage, new Date()).then(
                 res => 
                     console.log(res.data),
-                    //renderMessages(),
+                    renderMessages(),
                     document.getElementById('messageInput').value = ""
             );
         }
