@@ -12,16 +12,16 @@ const Home = () => {
 
     const renderMessages = () => {
         API.findAllMessages().then(res => {
-            console.log(res.data);
+            //console.log(res.data);
             setMessages(messages => res.data);
         });
     }
 
     const saveMessage = (event) => {
         if (newMessage !== "") {
-            API.createMessage(newMessage, new Date()).then(
+            API.createMessage(newMessage).then(
                 (res) => {
-                    console.log(res.data);
+                    //console.log(res.data);
                     renderMessages();
                     document.getElementById('messageInput').value = "";
                 }
@@ -30,18 +30,17 @@ const Home = () => {
     };
 
     const deleteMessage = (event) => {
-        console.log(event.currentTarget.dataset.message_id);
         let messageDeletionID = event.currentTarget.dataset.message_id;
         API.deleteOneMessage(messageDeletionID).then(
             (res) => {
-                console.log(res.data);
+                //console.log(res.data);
                 renderMessages();
             }
         )
     }
 
     useEffect(() => {
-        console.log("Use effect called...");
+        //console.log("Use effect called...");
         renderMessages();
     }, [])
 
@@ -75,7 +74,7 @@ const Home = () => {
                             <div className="col-md-12 mt-2 mb-2 message-card" key={i}>
                                 <div className="pt-1">
                                     <div style={{ fontStyle: "italic" }} className="mt-1 mb-1">"{message.message}"</div>
-                                    <div style={{ color: "#61dafb" }} className="mb-2">{moment(message.created_date).format("DD MMMM YYYY h:mm A")}</div>
+                                    <div style={{ color: "#61dafb" }} className="mb-2">{moment(message.createdAt).format("DD MMMM YYYY h:mm A")}</div>
                                     <div className="btn btn-sm btn-custom-red mb-1 mt-1" data-message_id={message.id} onClick={deleteMessage}>Delete</div>
                                 </div>
                             </div>
@@ -85,7 +84,6 @@ const Home = () => {
             </div>
         </div>
     )
-
 }
 
 export default Home;
