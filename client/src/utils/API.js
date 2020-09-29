@@ -11,10 +11,9 @@ export default {
     findAllMessages: function () {
         console.log("Called find all messages API...");
         return axios({ method: "post", url: apiURL + "/api/react-mysql-template/find-all-messages", data: {} });
-    }/*,
+    },
     deleteOneMessage: function(messageID) {
         console.log("Called deleteOneMessage API...");
-        return axios({ method: "post", url: apiURL + "/api/react-mongo-template/delete-one-message", data: {messageID} });
+        return axios({ method: "post", url: apiURL + "/api/react-mysql-template/delete-one-message", data: {messageID} });
     }
-    */
 };

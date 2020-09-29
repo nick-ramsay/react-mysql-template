@@ -8,11 +8,9 @@ router
 router
   .route("/find-all-messages")
   .post(rstControllers.findAllMessages);
-/*
+  
 router
   .route("/delete-one-message")
   .post(rstControllers.deleteOneMessage);
-  
-  */
 
 module.exports = router;

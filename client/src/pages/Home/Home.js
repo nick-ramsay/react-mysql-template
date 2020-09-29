@@ -30,11 +30,11 @@ const Home = () => {
 
     const deleteMessage = (event) => {
         console.log(event.currentTarget.dataset.message_id);
-        //let messageDeletionID = event.currentTarget.dataset.message_id;
-        /*API.deleteOneMessage(messageDeletionID).then(
+        let messageDeletionID = event.currentTarget.dataset.message_id;
+        API.deleteOneMessage(messageDeletionID).then(
             res => console.log(res.data),
             renderMessages()
-        );*/
+        );
     }
 
     useEffect(() => {
@@ -73,7 +73,7 @@ const Home = () => {
                                 <div className="pt-1">
                                     <div style={{ fontStyle: "italic" }} className="mt-1 mb-1">"{message.message}"</div>
                                     <div style={{ color: "#61dafb" }} className="mb-2">{moment(message.created_date).format("DD MMMM YYYY h:mm A")}</div>
-                                    <div className="btn btn-sm btn-custom-red mb-1 mt-1" data-message_id={message._id} onClick={deleteMessage}>Delete</div>
+                                    <div className="btn btn-sm btn-custom-red mb-1 mt-1" data-message_id={message.id} onClick={deleteMessage}>Delete</div>
                                 </div>
                             </div>
                         )}
