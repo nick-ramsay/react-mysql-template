@@ -9,6 +9,16 @@ body {
   justify-content: center;
 }
 
+.form-control {
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color:  transparent;
+  box-shadow: 0 0 0 0.2rem rgba(232,62,140,.8);
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -24,10 +34,6 @@ body {
 
 .table-dark {
   background-color: inherit;
-}
-
-.form-control:focus {
-  border-color: #61dafb;
 }
 
 .btn {
@@ -65,19 +71,6 @@ body {
   background-color: #e83e8c;
   border-color: #e83e8c;
   box-shadow: none;
-}
-
-.deletion-x {
-  color: #e83e8c;
-  border: 2px solid #e83e8c;
-  border-radius: 4%;
-  font-weight: bold;
-}
-
-.deletion-x:hover {
-  color: #cd186b;
-  border: 2px solid #cd186b;
-  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {

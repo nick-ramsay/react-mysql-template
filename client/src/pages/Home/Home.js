@@ -40,7 +40,6 @@ const Home = () => {
     }
 
     useEffect(() => {
-        //console.log("Use effect called...");
         renderMessages();
     }, [])
 
@@ -63,7 +62,7 @@ const Home = () => {
                             </div>
                             <div className="form-row text-center">
                                 <div className="col mt-3">
-                                    <div type="button" className="btn btn-custom" onClick={saveMessage}>Submit</div>
+                                    <div type="button" className="btn btn-custom" tabindex="0" onClick={saveMessage}>Submit</div>
                                 </div>
                             </div>
                         </form>
@@ -75,7 +74,7 @@ const Home = () => {
                                 <div className="pt-1">
                                     <div style={{ fontStyle: "italic" }} className="mt-1 mb-1">"{message.message}"</div>
                                     <div style={{ color: "#61dafb" }} className="mb-2">{moment(message.createdAt).format("DD MMMM YYYY h:mm A")}</div>
-                                    <div className="btn btn-sm btn-custom-red mb-1 mt-1" data-message_id={message.id} onClick={deleteMessage}>Delete</div>
+                                    <div className="btn btn-sm btn-custom-red mb-1 mt-1" data-message_id={message.id} tabindex="0" onClick={deleteMessage}>Delete</div>
                                 </div>
                             </div>
                         )}
