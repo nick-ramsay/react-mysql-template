@@ -20,10 +20,11 @@ const Home = () => {
     const saveMessage = (event) => {
         if (newMessage !== "") {
             API.createMessage(newMessage, new Date()).then(
-                res => 
-                    console.log(res.data),
-                    renderMessages(),
-                    document.getElementById('messageInput').value = ""
+                (res) => {
+                    console.log(res.data);
+                    renderMessages();
+                    document.getElementById('messageInput').value = "";
+                }
             );
         }
     };
@@ -32,9 +33,11 @@ const Home = () => {
         console.log(event.currentTarget.dataset.message_id);
         let messageDeletionID = event.currentTarget.dataset.message_id;
         API.deleteOneMessage(messageDeletionID).then(
-            res => console.log(res.data),
-            renderMessages()
-        );
+            (res) => {
+                console.log(res.data);
+                renderMessages();
+            }
+        )
     }
 
     useEffect(() => {
