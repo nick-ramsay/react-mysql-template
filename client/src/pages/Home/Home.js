@@ -11,43 +11,29 @@ const Home = () => {
 
     var [newMessage, setNewMessage] = useInput("");
     var [messages, setMessages] = useState([]);
-    var [loading, setLoading] = useState(true);
-
-    console.log(loading);
 
     const renderMessages = () => {
-        setLoading(loading => true);
         API.findAllMessages().then(res => {
-            //console.log(res.data);
-            setMessages(messages => 
-                res.data,
-                setLoading(loading => false)
-            );
+            setMessages(messages => res.data);
         });
     }
 
     const saveMessage = (event) => {
-        setLoading(loading => true);
         if (newMessage !== "") {
             API.createMessage(newMessage).then(
                 (res) => {
-                    //console.log(res.data);
                     renderMessages();
                     document.getElementById('messageInput').value = "";
-                    setLoading(loading => false);
                 }
             );
         }
     };
 
     const deleteMessage = (event) => {
-        setLoading(loading => true);
         let messageDeletionID = event.currentTarget.dataset.message_id;
         API.deleteOneMessage(messageDeletionID).then(
             (res) => {
-                //console.log(res.data);
                 renderMessages();
-                setLoading(loading => false);
             }
         )
     }
@@ -80,9 +66,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </form>
-                        <p style={{ color: "#e83e8c" }} className="mt-4 mb-1">
-                            {loading === true ? "... ... ...": ""}
-                            {messages.length === 0 && loading === false ? "No Messages" : ""}
+                        <p style={{ color: "#e83e8c" }} className="mt-3 mb-1">
+                            {messages.length === 0 ? "No Messages" : messages.length + (messages.length > 1 ? " messages" : " message")}
                         </p>
                         {messages.map((message, i) =>
                             <div className="col-md-12 mt-2 mb-2 message-card" key={i}>
