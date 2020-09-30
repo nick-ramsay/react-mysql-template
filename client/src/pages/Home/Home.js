@@ -11,32 +11,43 @@ const Home = () => {
 
     var [newMessage, setNewMessage] = useInput("");
     var [messages, setMessages] = useState([]);
+    var [loading, setLoading] = useState(true);
+
+    console.log(loading);
 
     const renderMessages = () => {
+        setLoading(loading => true);
         API.findAllMessages().then(res => {
             //console.log(res.data);
-            setMessages(messages => res.data);
+            setMessages(messages => 
+                res.data,
+                setLoading(loading => false)
+            );
         });
     }
 
     const saveMessage = (event) => {
+        setLoading(loading => true);
         if (newMessage !== "") {
             API.createMessage(newMessage).then(
                 (res) => {
                     //console.log(res.data);
                     renderMessages();
                     document.getElementById('messageInput').value = "";
+                    setLoading(loading => false);
                 }
             );
         }
     };
 
     const deleteMessage = (event) => {
+        setLoading(loading => true);
         let messageDeletionID = event.currentTarget.dataset.message_id;
         API.deleteOneMessage(messageDeletionID).then(
             (res) => {
                 //console.log(res.data);
                 renderMessages();
+                setLoading(loading => false);
             }
         )
     }
@@ -48,7 +59,7 @@ const Home = () => {
     return (
         <div>
             <div className="App">
-                <header className="App-header pt-3">
+                <header className="App-header p-4">
                     <h1>React MySQL Template</h1>
                     <img src={logo} className="App-logo" alt="logo" />
                     <img src={MySQLLogo} className="mysql-logo mr-5" alt="mysql_logo" />
@@ -70,7 +81,8 @@ const Home = () => {
                             </div>
                         </form>
                         <p style={{ color: "#e83e8c" }} className="mt-4 mb-1">
-                            {messages.length === 0 ? "No Messages" : ""}
+                            {loading === true ? "... ... ...": ""}
+                            {messages.length === 0 && loading === false ? "No Messages" : ""}
                         </p>
                         {messages.map((message, i) =>
                             <div className="col-md-12 mt-2 mb-2 message-card" key={i}>
