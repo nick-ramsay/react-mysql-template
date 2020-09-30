@@ -38,9 +38,13 @@ const Home = () => {
         )
     }
 
+    setInterval(() => {
+        console.log('you can see me every 3 seconds');
+    }, 3000);
+
     useEffect(() => {
         renderMessages();
-    }, [])
+    },[])
 
     return (
         <div>
