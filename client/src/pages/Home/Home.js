@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useInput } from '../../sharedFunctions/sharedFunctions';
 import API from "../../utils/API";
 import moment from 'moment';
@@ -48,11 +48,11 @@ const Home = () => {
     return (
         <div>
             <div className="App">
-                <header className="App-header">
+                <header className="App-header pt-3">
                     <h1>React MySQL Template</h1>
-                    <img src={MySQLLogo} className="mysql-logo ml-5" alt="mysql_logo" />
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p>Edit <code>src/App.js</code> and save to reload.</p>
+                    <img src={MySQLLogo} className="mysql-logo mr-5" alt="mysql_logo" />
+                    <p>Edit <code>src/pages/Home/Home.js</code> and save to reload.</p>
                     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
                 </header>
                 <div className="container">
@@ -65,7 +65,7 @@ const Home = () => {
                             </div>
                             <div className="form-row text-center">
                                 <div className="col mt-3">
-                                    <div type="button" className="btn btn-custom" tabindex="0" onClick={saveMessage}>Submit</div>
+                                    <div type="button" className="btn btn-custom" tabIndex="0" onClick={saveMessage}>Submit</div>
                                 </div>
                             </div>
                         </form>
@@ -77,14 +77,14 @@ const Home = () => {
                                 <div className="pt-1">
                                     <div style={{ fontStyle: "italic" }} className="mt-1 mb-1">"{message.message}"</div>
                                     <div style={{ color: "#61dafb" }} className="mb-2">{moment(message.createdAt).format("DD MMMM YYYY h:mm A")}</div>
-                                    <div className="btn btn-sm btn-custom-red mb-1 mt-1" data-message_id={message.id} tabindex="0" onClick={deleteMessage}>Delete</div>
+                                    <div className="btn btn-sm btn-custom-red mb-1 mt-1" data-message_id={message.id} tabIndex="0" onClick={deleteMessage}>Delete</div>
                                 </div>
                             </div>
                         )}
                     </div>
                     <div className="col-md-12 pt-3 pb-3">
                         <a href="https://github.com/nick-ramsay/react-mysql-template" title="Check out this repo on GitHub!" className="github-link">
-                            <img className="github-logo" src={GithubLogo} />
+                            <img className="github-logo" src={GithubLogo} alt="GitHub_logo" />
                         </a>
                     </div>
                 </div>
