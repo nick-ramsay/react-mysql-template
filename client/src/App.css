@@ -32,6 +32,19 @@ body {
   pointer-events: none;
 }
 
+.github-link {
+  color: white;
+}
+
+.github-link:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.github-logo {
+  height: 23px;
+}
+
 .table-dark {
   background-color: inherit;
 }

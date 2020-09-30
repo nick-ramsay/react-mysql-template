@@ -3,6 +3,7 @@ import { useInput } from '../../sharedFunctions/sharedFunctions';
 import API from "../../utils/API";
 import moment from 'moment';
 import logo from '../../../src/logo.svg';
+import GithubLogo from '../../images/github_logos/GitHub_Logo_White.png';
 import "./style.css";
 
 const Home = () => {
@@ -53,7 +54,7 @@ const Home = () => {
                     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
                 </header>
                 <div className="container">
-                    <div className="col-md-12">
+                    <div className="col-md-12 pb-6">
                         <form className="mt-3">
                             <div className="form-row text-center">
                                 <div className="col">
@@ -79,6 +80,9 @@ const Home = () => {
                             </div>
                         )}
                     </div>
+                    <a href="https://github.com/nick-ramsay/react-mysql-template" title="Check out this repo on GitHub!" className="github-link">
+                        <img className="github-logo" src={GithubLogo} />
+                    </a>
                 </div>
             </div>
         </div>
