@@ -54,7 +54,7 @@ const Home = () => {
                     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
                 </header>
                 <div className="container">
-                    <div className="col-md-12 pb-6">
+                    <div className="col-md-12">
                         <form className="mt-3">
                             <div className="form-row text-center">
                                 <div className="col">
@@ -80,9 +80,11 @@ const Home = () => {
                             </div>
                         )}
                     </div>
-                    <a href="https://github.com/nick-ramsay/react-mysql-template" title="Check out this repo on GitHub!" className="github-link">
-                        <img className="github-logo" src={GithubLogo} />
-                    </a>
+                    <div className="col-md-12 pt-3 pb-3">
+                        <a href="https://github.com/nick-ramsay/react-mysql-template" title="Check out this repo on GitHub!" className="github-link">
+                            <img className="github-logo" src={GithubLogo} />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
