@@ -4,6 +4,7 @@ import API from "../../utils/API";
 import moment from 'moment';
 import logo from '../../../src/logo.svg';
 import GithubLogo from '../../images/github_logos/GitHub_Logo_White.png';
+import MySQLLogo from '../../images/mysql_logo.png';
 import "./style.css";
 
 const Home = () => {
@@ -49,6 +50,7 @@ const Home = () => {
             <div className="App">
                 <header className="App-header">
                     <h1>React MySQL Template</h1>
+                    <img src={MySQLLogo} className="mysql-logo ml-5" alt="mysql_logo" />
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>Edit <code>src/App.js</code> and save to reload.</p>
                     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>

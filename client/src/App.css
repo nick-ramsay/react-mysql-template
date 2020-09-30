@@ -32,6 +32,10 @@ body {
   pointer-events: none;
 }
 
+.mysql-logo {
+  height: 30vmin;
+}
+
 .github-link {
   color: white;
 }
