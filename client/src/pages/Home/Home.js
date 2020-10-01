@@ -7,6 +7,7 @@ import GithubLogo from '../../images/github_logos/GitHub_Logo_White.png';
 import MySQLLogo from '../../images/mysql_logo.png';
 import "./style.css";
 
+
 const Home = () => {
 
     var [newMessage, setNewMessage] = useInput("");
