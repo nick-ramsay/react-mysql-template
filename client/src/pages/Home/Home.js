@@ -41,7 +41,7 @@ const Home = () => {
 
     useEffect(() => {
         renderMessages();
-    },[])
+    }, [])
 
     return (
         <div>
@@ -81,7 +81,7 @@ const Home = () => {
                         )}
                     </div>
                     <div className="col-md-12 pt-3 pb-3">
-                        <a href="https://github.com/nick-ramsay/react-mysql-template" title="Check out this repo on GitHub!" className="github-link">
+                        <a href="https://github.com/nick-ramsay/react-mysql-template" target="_blank" rel="noopener noreferrer" title="Check out this repo on GitHub!" className="github-link">
                             <img className="github-logo" src={GithubLogo} alt="GitHub_logo" />
                         </a>
                     </div>
