@@ -49,7 +49,7 @@ const Home = () => {
                 <header className="App-header p-4">
                     <h1>React MySQL Template</h1>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <img src={MySQLLogo} className="mysql-logo mr-5" alt="mysql_logo" />
+                    <img src={MySQLLogo} className="mysql-logo" alt="mysql_logo" />
                     <p>Edit <code>src/pages/Home/Home.js</code> and save to reload.</p>
                     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
                 </header>
