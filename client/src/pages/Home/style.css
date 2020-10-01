@@ -2,3 +2,7 @@
     border: 1px solid  #61dafb;
     background-color: #343a40;
 }
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
